@@ -1,7 +1,5 @@
 const Anime = () => {
-  return (
-    <div>Anime</div>
-  )
-}
+  return <div>Anime</div>;
+};
 
-export default Anime
+export default Anime;
