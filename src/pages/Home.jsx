@@ -1,28 +1,30 @@
 import { useState, useEffect } from "react";
+import AnimeCard from "../Components/AnimeCard";
 
 const animeURL = import.meta.env.VITE_API;
 
 const Home = () => {
   const [topAnime, setTopAnime] = useState([]);
 
-  const getTopRateAnime = async (url) => {
+  const getTopRatedAnime = async (url) => {
     const res = await fetch(url);
-    const data = await res.json;
-
-    console.log(data.results);
+    const data = await res.json();
+    setTopAnime(data.results);
   };
 
   useEffect(() => {
-    const topRateUrl = `${animeURL}/reviews`;
-    getTopRateAnime(topRateUrl);
+    const topRatedUrl = `${animeURL}/trending/anime`;
+    getTopRatedAnime(topRatedUrl);
   }, []);
 
   return (
-    <div>
-      {topAnime &&
-        topAnime.map((anime) => {
-          anime.title;
-        })}
+    <div className="container">
+      <h2 className="title">Melhores avaliados:</h2>
+      <div className="animes-container">
+        {topAnime === 0 && <p>Carregando...</p>}
+        {topAnime > 0 &&
+          topAnime.map((anime) => <AnimeCard key={anime.id} anime={anime} />)}
+      </div>
     </div>
   );
 };

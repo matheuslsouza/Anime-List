@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <h2> Animes list</h2>
       <Outlet />
     </div>
   );
