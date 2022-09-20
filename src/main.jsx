@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from "./App";
 import Home from "./pages/Home";
-import Anime from "./pages/Anime";
+import Movie from "./pages/Movie";
 import Search from "./pages/Search";
 
 import "./index.css";
@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Home />} />
-          <Route path="anime/:id" element={<Anime />} />
+          <Route path="movie/:id" element={<Movie />} />
           <Route path="search" element={<Search />} />
         </Route>
       </Routes>
