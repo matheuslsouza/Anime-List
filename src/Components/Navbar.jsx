@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
 
 import "./NavBar.css";
@@ -12,6 +11,10 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(search);
+
+    if (!search) return;
+    navigate(`/search?q=${search}`);
+    setSearch("");
   };
 
   return (
@@ -21,8 +24,7 @@ const Navbar = () => {
           <BiCameraMovie /> Movie List
         </Link>
       </h2>
-      <form onSubmit={handleSubmit}></form>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Search to movie"
