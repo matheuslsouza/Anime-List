@@ -11,7 +11,7 @@ A movie library website, showing key information. Building with React JS and API
 Here are the technologies used in this project.
 
 * React JS
-* API 
+* API - The movie db
 * Vite
 
 ### 1 - Home Page.
