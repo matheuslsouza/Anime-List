@@ -4,7 +4,7 @@
 
 ## Film List
 
-A movie library website, showing key information. Building with React JS and API Consumption
+A movie library website, showing key information. Built with React JS and API 
 
 ## Technology 
 
