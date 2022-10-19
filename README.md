@@ -14,9 +14,7 @@ Here are the technologies used in this project.
 * API 
 * Vite
 
-## How to use
-
-### 1 - Home Page.
+## 1 - Home Page.
 
 ![Homepage image](https://github.com/matheuslsouza/Film-list/blob/main/src/redme/Home.png)
 
